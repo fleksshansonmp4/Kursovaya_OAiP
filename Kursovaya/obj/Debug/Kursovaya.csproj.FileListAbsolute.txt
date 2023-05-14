@@ -1,0 +1,8 @@
+C:\Users\Danila\source\repos\Kursovaya\Kursovaya\bin\Debug\Kursovaya.exe.config
+C:\Users\Danila\source\repos\Kursovaya\Kursovaya\bin\Debug\Kursovaya.exe
+C:\Users\Danila\source\repos\Kursovaya\Kursovaya\bin\Debug\Kursovaya.pdb
+C:\Users\Danila\source\repos\Kursovaya\Kursovaya\obj\Debug\Kursovaya.csproj.AssemblyReference.cache
+C:\Users\Danila\source\repos\Kursovaya\Kursovaya\obj\Debug\Kursovaya.csproj.SuggestedBindingRedirects.cache
+C:\Users\Danila\source\repos\Kursovaya\Kursovaya\obj\Debug\Kursovaya.csproj.CoreCompileInputs.cache
+C:\Users\Danila\source\repos\Kursovaya\Kursovaya\obj\Debug\Kursovaya.exe
+C:\Users\Danila\source\repos\Kursovaya\Kursovaya\obj\Debug\Kursovaya.pdb
