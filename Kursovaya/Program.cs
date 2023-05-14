@@ -58,21 +58,30 @@ namespace Kursovaya
             {
                 Console.WriteLine("Выберите способ ввода данных\n" +
                     "1. Вручную.\n" +
-                    "2. Из файла.");
+                    "2. Из файла.\n" +
+                    "0.Выход");
                 switch (Console.ReadLine())
                 {
                     case "1":
                         {
-                            Console.Write("Введите значение a:"); a = double.Parse(Console.ReadLine());
-                            Console.Write("Введите значение b:"); b = double.Parse(Console.ReadLine());
-                            if (a > b)
+                            try
                             {
-                                Console.WriteLine("Неверно выбран отрезок");
+                                Console.Write("Введите значение a:"); a = double.Parse(Console.ReadLine());
+                                Console.Write("Введите значение b:"); b = double.Parse(Console.ReadLine());
+                                if (a > b)
+                                {
+                                    Console.WriteLine("Неверно выбран отрезок\n");
+                                    break;
+                                }
+                                Console.Write("Введите точность вычислений:"); eps = double.Parse(Console.ReadLine());
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine(e.Message + "\n");
                                 break;
                             }
-                            Console.Write("Введите точность вычислений:"); eps = double.Parse(Console.ReadLine());
                             double min = FindMinimum(a, b, eps);
-                            Console.WriteLine("Минимум функции f(x) = x^2 - 4x + 3 на отрезке [{0}, {1}] равен {2}", a, b, min);
+                            Console.WriteLine("Минимум функции f(x) = x^2 - 4x + 3 на отрезке [{0}, {1}] равен {2}\n", a, b, min);
                         }
                         break;
                     case "2":
@@ -85,7 +94,7 @@ namespace Kursovaya
                             }
                             catch (Exception e)
                             {
-                                Console.WriteLine(e.Message);
+                                Console.WriteLine(e.Message + "\n");
                                 break;
                             }
                             if (a > b)
@@ -93,8 +102,14 @@ namespace Kursovaya
                                 Console.WriteLine("Неверно выбран отрезок");
                                 break;
                             }
+                            Console.WriteLine($"Данные из текстового файла:\n a:{a}\n b:{b}\n eps:{eps}\n");
                             double min = FindMinimum(a, b, eps);
-                            Console.WriteLine("Минимум функции f(x) = x^2 - 4x + 3 на отрезке [{0}, {1}] равен {2}", a, b, min);
+                            Console.WriteLine("Минимум функции f(x) = x^2 - 4x + 3 на отрезке [{0}, {1}] равен {2}\n", a, b, min);
+                        }
+                        break;
+                    case "0":
+                        {
+                            Environment.Exit(0);
                         }
                         break;
                     default:
